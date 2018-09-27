@@ -1,0 +1,8 @@
+Criar o cadastro de Dependentes que herde de Pessoa.
+
+Passos a serem seguidos:
+1- Criar a classe Dependentes que estenda de Pessoa;
+2- Criar a controle de dependentes com os métodos apropriados;
+3- Criar a view de dependentes com os métodos apropriados;
+4- Criar a situação de cadastro e manutenção de dependentes 
+apartir de um ponto logico do sistema. 
