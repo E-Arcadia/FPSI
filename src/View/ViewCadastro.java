@@ -2,7 +2,7 @@ package View;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Entidades.Pessoa;
+import Entidades.Cliente;
 
 public class ViewCadastro {
 	private Scanner teclado;
@@ -22,31 +22,31 @@ public class ViewCadastro {
 		return teclado.nextLine();
 	}
 
-	public Pessoa inserir() {
-		Pessoa umaPessoa = new Pessoa();
+	public Cliente inserir() {
+		Cliente umaCliente = new Cliente();
 		System.out.println("INSERIR");
 		System.out.println("Nome: ");
-		umaPessoa.setNome(teclado.nextLine());
+		umaCliente.setNome(teclado.nextLine());
 
 		System.out.println("E-Mail: ");
-		umaPessoa.setEmail(teclado.nextLine());
+		umaCliente.setEmail(teclado.nextLine());
 
 		System.out.println("Fone: ");
-		umaPessoa.setFone(teclado.nextLine());
+		umaCliente.setFone(teclado.nextLine());
 
-		return umaPessoa;
+		return umaCliente;
 	}
 
-	public void listar(ArrayList<Pessoa> agenda) {
+	public void listar(ArrayList<Cliente> agenda) {
 		System.out.println("\nLISTA DE CADASTRADOS");
 		int pos = 0;
-		for (Pessoa pessoa : agenda) {
-			System.out.println("Posição: " + pos++ + " : " + pessoa.toString());
+		for (Cliente cliente : agenda) {
+			System.out.println("Posição: " + pos++ + " : " + cliente.toString());
 		}
 
 	}
 
-	public void alterar(ArrayList<Pessoa> agenda) {
+	public void alterar(ArrayList<Cliente> agenda) {
 		listar(agenda);
 		boolean continuar = true;
 		int pos = 0;

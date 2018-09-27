@@ -4,12 +4,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 
+import Entidades.Cliente;
 import Entidades.Pessoa;
 import View.ViewCadastro;
 
 public class ControleCadastro {
 	private ViewCadastro viewCadastro;
-	private ArrayList<Pessoa> agenda;
+	private ArrayList<Cliente> agenda;
 
 	public ControleCadastro() {
 		viewCadastro = new ViewCadastro();
