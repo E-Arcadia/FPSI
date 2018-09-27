@@ -34,6 +34,9 @@ public class ViewCadastro {
 		System.out.println("Fone: ");
 		umaCliente.setFone(teclado.nextLine());
 
+		System.out.println("Cartão de Crédito: ");
+		umaCliente.setCartaoCredito(teclado.nextLine());
+		
 		return umaCliente;
 	}
 
@@ -41,7 +44,7 @@ public class ViewCadastro {
 		System.out.println("\nLISTA DE CADASTRADOS");
 		int pos = 0;
 		for (Cliente cliente : agenda) {
-			System.out.println("Posição: " + pos++ + " : " + cliente.toString());
+			System.out.println("Posição: " + pos++ + " : " + cliente.mostraDados());
 		}
 
 	}
@@ -72,6 +75,9 @@ public class ViewCadastro {
 		
 		System.out.println("Fone ("+ agenda.get(pos).getFone() +"): ");
 		agenda.get(pos).setFone(teclado.nextLine());
+		
+		System.out.println("Cartão de Crédito: "+ agenda.get(pos).getCartaoCredito() +"): ");
+		agenda.get(pos).setCartaoCredito(teclado.nextLine());
 		
 		
 	}

@@ -55,6 +55,9 @@ public class Cliente extends Pessoa {
 	}
 
 
-	
+	public String mostraDados() {
+		return "Cliente: Cartao Credito=" + cartaoCredito + ", Nome=" + getNome() + ", E-mail()=" + getEmail()
+				+ ", Fone()=" + getFone() + "]";
+	}
 	
 }

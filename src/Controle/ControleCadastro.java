@@ -14,8 +14,8 @@ public class ControleCadastro {
 
 	public ControleCadastro() {
 		viewCadastro = new ViewCadastro();
-		trataMenu();
 		agenda = new ArrayList<>();
+		trataMenu();
 	}
 
 	private void trataMenu() {
