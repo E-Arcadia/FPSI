@@ -1,16 +1,20 @@
 package Entidades;
 
+import java.util.ArrayList;
+
 public class Cliente extends Pessoa {
 	private String cartaoCredito;
+	private ArrayList<Dependente> dependentes;
 	
+	
+	public Cliente() {
+		this.dependentes = new ArrayList<>();
+	}	
 	
 	public Cliente(String nome, String email, String fone, String cartaoCredito) {
 		super(nome, email, fone);
 		this.cartaoCredito = cartaoCredito;
-	}
-
-	public Cliente() {
-		
+		this.dependentes = new ArrayList<>();
 	}
 
 	public String getCartaoCredito() {
@@ -20,6 +24,20 @@ public class Cliente extends Pessoa {
 	public void setCartaoCredito(String cartaoCredito) {
 		this.cartaoCredito = cartaoCredito;
 	}
+	
+	public void addDependentes(Dependente dependente) {
+		this.dependentes.add(dependente);
+	}
+	
+	public void removeDependentes(Dependente dependente) {
+		this.dependentes.remove(dependente);
+	}
+	
+	public ArrayList<Dependente> getDependente(){
+		return this.dependentes;
+	}
+	
+	
 	
 	@Override
 	public int hashCode() {
@@ -56,8 +74,11 @@ public class Cliente extends Pessoa {
 
 
 	public String mostraDados() {
-		return "Cliente: Cartao Credito=" + cartaoCredito + ", Nome=" + getNome() + ", E-mail()=" + getEmail()
-				+ ", Fone()=" + getFone() + "]";
+		return "Cliente: Cartao Credito=" + cartaoCredito 
+				+ ", Nome=" + getNome() 
+				+ ", E-mail()=" + getEmail()
+				+ ", Fone()=" + getFone() + "]"
+				+ "Total de Dependentes:" + this.dependentes.size();
 	}
 	
 }

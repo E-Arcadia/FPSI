@@ -2,6 +2,7 @@ package View;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Controle.ControleDependente;
 import Entidades.Cliente;
 
 public class ViewCadastro {
@@ -12,7 +13,7 @@ public class ViewCadastro {
 	}
 
 	public String mostraMenu() {
-		System.out.println("MENU");
+		System.out.println("MENU CLIENTE");
 		System.out.println("1 - Inserir");
 		System.out.println("2 - Listar");
 		System.out.println("3 - Alterar");
@@ -36,6 +37,12 @@ public class ViewCadastro {
 
 		System.out.println("Cartão de Crédito: ");
 		umaCliente.setCartaoCredito(teclado.nextLine());
+		
+		System.out.println("Cadastrar Dependente (S/n)?");
+		String cadastrarDependente = teclado.nextLine();
+		if(cadastrarDependente.toUpperCase().startsWith("S")) {
+			new ControleDependente(umaCliente);			
+		}
 		
 		return umaCliente;
 	}
