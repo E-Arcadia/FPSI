@@ -1,1 +1,14 @@
+Este código:
 https://github.com/E-Arcadia/FPSI
+
+
+Exercício:
+=========
+Termine este código implementado as seguintes sujestões
+e outras que sejam apropriadas.
+
+1. Refatore este código para que a chamada da ControleDependente 
+	não seja feito da ViewCadastro. Do jeito que está irá ferir 
+	o acoplamento.
+2. Implemente o alterar e excluir para Dependente.
+3. Implemente acesso ao dependente de forma ergonômica 
