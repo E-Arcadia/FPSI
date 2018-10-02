@@ -1,4 +1,5 @@
 package Controle;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -6,15 +7,15 @@ import java.util.TreeSet;
 
 import Entidades.Cliente;
 import Entidades.Pessoa;
-import View.ViewCadastro;
+import View.ViewCliente;
 
-public class ControleCadastro {
-	private ViewCadastro viewCadastro;
-	private ArrayList<Cliente> agenda;
+public class ControleCliente {
+	private ViewCliente viewCadastro;
+	private ArrayList<Cliente> listaClientes;
 
-	public ControleCadastro() {
-		viewCadastro = new ViewCadastro();
-		agenda = new ArrayList<>();
+	public ControleCliente() {
+		viewCadastro = new ViewCliente();
+		listaClientes = new ArrayList<>();
 		trataMenu();
 	}
 
@@ -25,13 +26,19 @@ public class ControleCadastro {
 
 			switch (opc) {
 			case "1":
-				 agenda.add(viewCadastro.inserir());
+				Cliente umCliente = viewCadastro.inserir();
+				listaClientes.add(umCliente);
+				String cadastrarDependente = viewCadastro.cadastraDependente();
+				if (cadastrarDependente.toUpperCase().startsWith("S")) {
+					new ControleDependente(umCliente);
+				}
+
 				break;
 			case "2":
-				viewCadastro.listar(agenda);
+				viewCadastro.listar(listaClientes);
 				break;
 			case "3":
-				viewCadastro.alterar(agenda);
+				viewCadastro.alterar(listaClientes);
 				break;
 			case "4":
 				System.out.println("Excluir");

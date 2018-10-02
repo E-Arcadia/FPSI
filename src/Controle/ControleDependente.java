@@ -7,7 +7,7 @@ import java.util.TreeSet;
 import Entidades.Cliente;
 import Entidades.Dependente;
 import Entidades.Pessoa;
-import View.ViewCadastro;
+import View.ViewCliente;
 import View.ViewDependente;
 
 public class ControleDependente {

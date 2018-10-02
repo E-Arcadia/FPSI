@@ -1,11 +1,11 @@
-import Controle.ControleCadastro;
+import Controle.ControleCliente;
 import Entidades.Pessoa;
 
 public class Principal {
-	private ControleCadastro controleCadastro;
+	private ControleCliente controleCadastro;
 	
 	public Principal() {
-		controleCadastro = new ControleCadastro();
+		controleCadastro = new ControleCliente();
 	}
 
 	public static void main(String[] args) {

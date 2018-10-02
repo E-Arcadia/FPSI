@@ -5,10 +5,10 @@ import java.util.Scanner;
 import Controle.ControleDependente;
 import Entidades.Cliente;
 
-public class ViewCadastro {
+public class ViewCliente {
 	private Scanner teclado;
 
-	public ViewCadastro() {
+	public ViewCliente() {
 		teclado = new Scanner(System.in);
 	}
 
@@ -24,27 +24,21 @@ public class ViewCadastro {
 	}
 
 	public Cliente inserir() {
-		Cliente umaCliente = new Cliente();
+		Cliente umCliente = new Cliente();
 		System.out.println("INSERIR");
 		System.out.println("Nome: ");
-		umaCliente.setNome(teclado.nextLine());
+		umCliente.setNome(teclado.nextLine());
 
 		System.out.println("E-Mail: ");
-		umaCliente.setEmail(teclado.nextLine());
+		umCliente.setEmail(teclado.nextLine());
 
 		System.out.println("Fone: ");
-		umaCliente.setFone(teclado.nextLine());
+		umCliente.setFone(teclado.nextLine());
 
 		System.out.println("Cartão de Crédito: ");
-		umaCliente.setCartaoCredito(teclado.nextLine());
+		umCliente.setCartaoCredito(teclado.nextLine());
 		
-		System.out.println("Cadastrar Dependente (S/n)?");
-		String cadastrarDependente = teclado.nextLine();
-		if(cadastrarDependente.toUpperCase().startsWith("S")) {
-			new ControleDependente(umaCliente);			
-		}
-		
-		return umaCliente;
+		return umCliente;
 	}
 
 	public void listar(ArrayList<Cliente> agenda) {
@@ -88,5 +82,12 @@ public class ViewCadastro {
 		
 		
 	}
+	
+	public String cadastraDependente() {
+		System.out.println("Cadastrar Dependente (S/n)?");
+		return teclado.nextLine();
+	}
+	
+	
 
 }
