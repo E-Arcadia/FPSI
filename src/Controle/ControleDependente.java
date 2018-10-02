@@ -28,7 +28,8 @@ public class ControleDependente {
 
 			switch (opc) {
 			case "1":
-				 cliente.getDependente().add(viewDependente.inserir());
+//				 cliente.getDependente().add(viewDependente.inserir());
+				 cliente.addDependentes(viewDependente.inserir());
 				break;
 			case "2":
 				viewDependente.listar(cliente.getDependente());

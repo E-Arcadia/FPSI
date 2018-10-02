@@ -23,21 +23,21 @@ public class ViewDependente {
 	}
 
 	public Dependente inserir() {
-		Dependente umaCliente = new Dependente();
+		Dependente umDependente = new Dependente();
 		System.out.println(" INSERIR DEPENDENTE");
 		System.out.println(" Nome: ");
-		umaCliente.setNome(teclado.nextLine());
+		umDependente.setNome(teclado.nextLine());
 
 		System.out.println(" E-Mail: ");
-		umaCliente.setEmail(teclado.nextLine());
+		umDependente.setEmail(teclado.nextLine());
 
 		System.out.println(" Fone: ");
-		umaCliente.setFone(teclado.nextLine());
+		umDependente.setFone(teclado.nextLine());
 
 		System.out.println(" RG: ");
-		umaCliente.setRG(teclado.nextLine());
+		umDependente.setRG(teclado.nextLine());
 		
-		return umaCliente;
+		return umDependente;
 	}
 
 	public void listar(ArrayList<Dependente> listaDependentes) {
