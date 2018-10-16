@@ -2,6 +2,7 @@ package Entidades;
 
 
 public class Pessoa {
+	private int ID;
 	private String nome;
 	private String email;
 	private String fone;
@@ -11,7 +12,8 @@ public class Pessoa {
 		
 	}
 	
-	public Pessoa(String nome, String email, String fone) {
+	public Pessoa(int ID, String nome, String email, String fone) {
+		this.ID = ID;
 		this.nome = nome;
 		this.email = email;
 		this.fone = fone;
@@ -20,6 +22,14 @@ public class Pessoa {
 
 
 
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
 
 	public String getNome() {
 		return nome;
@@ -39,15 +49,18 @@ public class Pessoa {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ID;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((fone == null) ? 0 : fone.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,6 +70,8 @@ public class Pessoa {
 		if (getClass() != obj.getClass())
 			return false;
 		Pessoa other = (Pessoa) obj;
+		if (ID != other.ID)
+			return false;
 		if (email == null) {
 			if (other.email != null)
 				return false;
@@ -74,20 +89,13 @@ public class Pessoa {
 			return false;
 		return true;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", email=" + email + ", fone=" + fone + "]";
+		return "Pessoa [ID=" + ID + ", nome=" + nome + ", email=" + email + ", fone=" + fone + "]";
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
+
 
 }

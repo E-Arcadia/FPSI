@@ -7,7 +7,12 @@ public class Dependente extends Pessoa {
 	}
 	
 	public Dependente(String nome, String email, String fone, String rG) {
-		super(nome, email, fone);
+		super(0,nome, email, fone);
+		RG = rG;
+	}
+	
+	public Dependente(int id,String nome, String email, String fone, String rG) {
+		super(id,nome, email, fone);
 		RG = rG;
 	}
 

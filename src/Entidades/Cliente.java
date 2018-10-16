@@ -12,7 +12,13 @@ public class Cliente extends Pessoa {
 	}	
 	
 	public Cliente(String nome, String email, String fone, String cartaoCredito) {
-		super(nome, email, fone);
+		super(0, nome, email, fone);
+		this.cartaoCredito = cartaoCredito;
+		this.dependentes = new ArrayList<>();
+	}
+	
+	public Cliente(int id, String nome, String email, String fone, String cartaoCredito) {
+		super(id, nome, email, fone);
 		this.cartaoCredito = cartaoCredito;
 		this.dependentes = new ArrayList<>();
 	}
@@ -66,12 +72,13 @@ public class Cliente extends Pessoa {
 
 
 
+
+
 	@Override
 	public String toString() {
-		return "Cliente [cartaoCredito=" + cartaoCredito + ", getNome()=" + getNome() + ", getEmail()=" + getEmail()
-				+ ", getFone()=" + getFone() + "]";
+		return "Cliente [cartaoCredito=" + cartaoCredito + ", dependentes=" + dependentes + ", toString()="
+				+ super.toString() + "]";
 	}
-
 
 	public String mostraDados() {
 		return "Cliente: Cartao Credito=" + cartaoCredito 
